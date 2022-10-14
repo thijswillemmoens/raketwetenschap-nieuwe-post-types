@@ -1,38 +1,38 @@
 <?php
 
 /**
- * Maak een post type voor de kennisbank.
+ * Maak een post type voor alle dossiers.
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
- * @since 2.1
+ * @since 2.0
  * @author Thijs Moens <post@thijsmoens.nl>
  * @link https://thijsmoens.nl
  */
-if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_kennisbank' ) ) :
+if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_dossiers' ) ) :
 
-    function raketwetenschap__nieuwe_post_type_voor_alle_kennisbank() {
+    function raketwetenschap__nieuwe_post_type_voor_alle_dossiers() {
  
         $labels = array(
-            'name'                => _x( 'Kennisbank', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
-            'singular_name'       => _x( 'Kennisbank', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
-            'menu_name'           => __( 'Kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'parent_item_colon'   => __( 'Parent Kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'all_items'           => __( 'Alle kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'view_item'           => __( 'Bekijk de kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new_item'        => __( 'Voeg nieuwe kennisbank toe', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new'             => __( 'Nieuwe kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'edit_item'           => __( 'Wijzig kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'update_item'         => __( 'Update kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'search_items'        => __( 'Doorzoek kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found'           => __( 'Geen kennisbank gevonden', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found_in_trash'  => __( 'Geen kennisbank gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
+            'name'                => _x( 'Dossiers', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
+            'singular_name'       => _x( 'Dossier', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
+            'menu_name'           => __( 'Dossiers', 'raketwetenschap-nieuwe-post-types' ),
+            'parent_item_colon'   => __( 'Parent Dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'all_items'           => __( 'Alle dossiers', 'raketwetenschap-nieuwe-post-types' ),
+            'view_item'           => __( 'Bekijk de dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new_item'        => __( 'Voeg nieuwe dossier toe', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new'             => __( 'Nieuwe dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'edit_item'           => __( 'Wijzig dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'update_item'         => __( 'Update dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'search_items'        => __( 'Doorzoek dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found'           => __( 'Geen dossier gevonden', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found_in_trash'  => __( 'Geen dossier gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
         );
      
      
         $parameters = array(
-            'label'               => __( 'kennisbank', 'raketwetenschap-nieuwe-post-types' ),
-            'description'         => __( 'De kennisbank met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
+            'label'               => __( 'dossier', 'raketwetenschap-nieuwe-post-types' ),
+            'description'         => __( 'De dossier met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             'hierarchical'        => false,
@@ -52,12 +52,12 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_kennisbank'
     
         );
      
-        // Registreer deze kennisbank
-        register_post_type( 'knowledge-base', $parameters );
+        // Registreer deze dossier
+        register_post_type( 'dossier', $parameters );
  
     }
  
-    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_kennisbank', 0 );
+    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_dossiers', 0 );
 
 endif; 
 
