@@ -8,7 +8,7 @@
  *
  * @raketwetenschap-nieuwe-post-types
  * Plugin Name: Raketwetenschap Nieuwe Post Types
- * Version:     2.0
+ * Version:     2.2
  * Plugin URI:  https://raketwetenschap.com
  * Description: Een simpele plugin voor het maken van nieuwe post types op de website van Raketwetenschap.
  * Author:      Thijs Moens
