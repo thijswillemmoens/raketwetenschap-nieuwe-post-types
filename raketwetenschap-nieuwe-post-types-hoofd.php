@@ -1,38 +1,38 @@
 <?php
 
 /**
- * Maak een post type voor alle collecties.
+ * Maak een post type voor alle thema's.
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
- * @since 2.0
+ * @since 4.0
  * @author Thijs Moens <post@thijsmoens.nl>
  * @link https://thijsmoens.nl
  */
-if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_collecties' ) ) :
+if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_themas' ) ) :
 
-    function raketwetenschap__nieuwe_post_type_voor_alle_collecties() {
+    function raketwetenschap__nieuwe_post_type_voor_alle_themas() {
  
         $labels = array(
-            'name'                => _x( 'Collecties', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
-            'singular_name'       => _x( 'Collectie', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
-            'menu_name'           => __( 'Collecties', 'raketwetenschap-nieuwe-post-types' ),
-            'parent_item_colon'   => __( 'Parent Collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'all_items'           => __( 'Alle collecties', 'raketwetenschap-nieuwe-post-types' ),
-            'view_item'           => __( 'Bekijk de collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new_item'        => __( 'Voeg nieuwe collectie toe', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new'             => __( 'Nieuwe collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'edit_item'           => __( 'Wijzig collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'update_item'         => __( 'Update collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'search_items'        => __( 'Doorzoek collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found'           => __( 'Geen collectie gevonden', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found_in_trash'  => __( 'Geen collectie gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
+            'name'                => _x( 'Thema\'s', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
+            'singular_name'       => _x( 'Thema', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
+            'menu_name'           => __( 'Thema\'s', 'raketwetenschap-nieuwe-post-types' ),
+            'parent_item_colon'   => __( 'Parent Thema', 'raketwetenschap-nieuwe-post-types' ),
+            'all_items'           => __( 'Alle thema\'s', 'raketwetenschap-nieuwe-post-types' ),
+            'view_item'           => __( 'Bekijk de thema', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new_item'        => __( 'Voeg nieuwe thema toe', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new'             => __( 'Nieuwe thema', 'raketwetenschap-nieuwe-post-types' ),
+            'edit_item'           => __( 'Wijzig thema', 'raketwetenschap-nieuwe-post-types' ),
+            'update_item'         => __( 'Update thema', 'raketwetenschap-nieuwe-post-types' ),
+            'search_items'        => __( 'Doorzoek thema', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found'           => __( 'Geen thema gevonden', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found_in_trash'  => __( 'Geen thema gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
         );
      
      
         $parameters = array(
-            'label'               => __( 'collectie', 'raketwetenschap-nieuwe-post-types' ),
-            'description'         => __( 'De collectie met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
+            'label'               => __( 'thema', 'raketwetenschap-nieuwe-post-types' ),
+            'description'         => __( 'Het thema met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             'hierarchical'        => false,
@@ -52,12 +52,12 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_collecties'
     
         );
      
-        // Registreer deze collectie
-        register_post_type( 'collectie', $parameters );
+        // Registreer deze thema
+        register_post_type( 'thema', $parameters );
  
     }
  
-    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_collecties', 0 );
+    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_themas', 0 );
 
 endif; 
 
@@ -125,39 +125,41 @@ endif;
 
 
 
+
+
 /**
- * Maak een post type voor alle raadsels.
+ * Maak een post type voor alle bedrijven.
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
- * @since 3.0
+ * @since 4.0
  * @author Thijs Moens <post@thijsmoens.nl>
  * @link https://thijsmoens.nl
  */
-if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_raadsels' ) ) :
+if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_bedrijven' ) ) :
 
-    function raketwetenschap__nieuwe_post_type_voor_alle_raadsels() {
+    function raketwetenschap__nieuwe_post_type_voor_alle_bedrijven() {
  
         $labels = array(
-            'name'                => _x( 'Raadsels', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
-            'singular_name'       => _x( 'Raadsel', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
-            'menu_name'           => __( 'Raadsels', 'raketwetenschap-nieuwe-post-types' ),
-            'parent_item_colon'   => __( 'Parent Raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'all_items'           => __( 'Alle raadsels', 'raketwetenschap-nieuwe-post-types' ),
-            'view_item'           => __( 'Bekijk het raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new_item'        => __( 'Voeg nieuw raadsel toe', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new'             => __( 'Nieuwe raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'edit_item'           => __( 'Wijzig raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'update_item'         => __( 'Update raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'search_items'        => __( 'Doorzoek raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found'           => __( 'Geen raadsel gevonden', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found_in_trash'  => __( 'Geen raadsel gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
+            'name'                => _x( 'Bedrijven', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
+            'singular_name'       => _x( 'Bedrijf', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
+            'menu_name'           => __( 'Bedrijven', 'raketwetenschap-nieuwe-post-types' ),
+            'parent_item_colon'   => __( 'Parent Bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'all_items'           => __( 'Alle bedrijven', 'raketwetenschap-nieuwe-post-types' ),
+            'view_item'           => __( 'Bekijk het bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new_item'        => __( 'Voeg nieuw bedrijf toe', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new'             => __( 'Nieuwe bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'edit_item'           => __( 'Wijzig bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'update_item'         => __( 'Update bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'search_items'        => __( 'Doorzoek bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found'           => __( 'Geen bedrijf gevonden', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found_in_trash'  => __( 'Geen bedrijf gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
         );
      
      
         $parameters = array(
-            'label'               => __( 'raadsel', 'raketwetenschap-nieuwe-post-types' ),
-            'description'         => __( 'Het raadsel met alle info.', 'raketwetenschap-nieuwe-post-types' ),
+            'label'               => __( 'bedrijf', 'raketwetenschap-nieuwe-post-types' ),
+            'description'         => __( 'Het bedrijf met alle info.', 'raketwetenschap-nieuwe-post-types' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             'hierarchical'        => false,
@@ -167,7 +169,7 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_raadsels' )
             'show_in_nav_menus'   => true,
             'show_in_admin_bar'   => true,
             'menu_position'       => 8,
-            'menu_icon'           => 'dashicons-bell',
+            'menu_icon'           => 'dashicons-store',
             'can_export'          => true,
             'has_archive'         => true,
             'exclude_from_search' => false,
@@ -177,12 +179,78 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_raadsels' )
     
         );
      
-        // Registreer deze raadsel
-        register_post_type( 'raadsel', $parameters );
+        // Registreer deze bedrijf
+        register_post_type( 'bedrijf', $parameters );
  
     }
  
-    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_raadsels', 0 );
+    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_bedrijven', 0 );
+
+endif; 
+
+
+
+
+
+
+/**
+ * Maak een post type voor alle personen.
+ * 
+ * @package Raketwetenschap
+ * @subpackage Plugins/Nieuwe_Post_Types
+ * @since 4.0
+ * @author Thijs Moens <post@thijsmoens.nl>
+ * @link https://thijsmoens.nl
+ */
+if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_personen' ) ) :
+
+    function raketwetenschap__nieuwe_post_type_voor_alle_personen() {
+ 
+        $labels = array(
+            'name'                => _x( 'Personen', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
+            'singular_name'       => _x( 'Persoon', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
+            'menu_name'           => __( 'Personen', 'raketwetenschap-nieuwe-post-types' ),
+            'parent_item_colon'   => __( 'Parent Persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'all_items'           => __( 'Alle personen', 'raketwetenschap-nieuwe-post-types' ),
+            'view_item'           => __( 'Bekijk het persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new_item'        => __( 'Voeg nieuw persoon toe', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new'             => __( 'Nieuwe persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'edit_item'           => __( 'Wijzig persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'update_item'         => __( 'Update persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'search_items'        => __( 'Doorzoek persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found'           => __( 'Geen persoon gevonden', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found_in_trash'  => __( 'Geen persoon gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
+        );
+     
+     
+        $parameters = array(
+            'label'               => __( 'persoon', 'raketwetenschap-nieuwe-post-types' ),
+            'description'         => __( 'De persoon met alle info.', 'raketwetenschap-nieuwe-post-types' ),
+            'labels'              => $labels,
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'hierarchical'        => false,
+            'public'              => true,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 8,
+            'menu_icon'           => 'dashicons-businessman',
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => false,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'post',
+            'show_in_rest' => true,
+    
+        );
+     
+        // Registreer deze persoon
+        register_post_type( 'persoon', $parameters );
+ 
+    }
+ 
+    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_personen', 0 );
 
 endif; 
 
