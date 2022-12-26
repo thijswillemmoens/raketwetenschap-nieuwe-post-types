@@ -3,6 +3,7 @@
 Een simpele plugin voor het maken van nieuwe custom post types voor op de websites van Raketwetenschap.
 
 ### Changelog
+- 5.0: Bedrijven en personen verwijderd.
 - 4.0: Aanpassing met minder custom post types + nieuw cpt > Thema
 - 3.0: Nieuw post type voor Raadsels.
 - 2.2: Dossiers is toch weer collecties en projecten is erbij gekomen.
