@@ -1,19 +1,19 @@
 <?php
 /**
- * ThijsMoens Nieuwe Post Types Plugin.
+ * Raketwetenschap Nieuwe Post Types Plugin.
  *
- * @package   	ThijsMoens
- * @subpackage 	Plugins/New_Post_types
+ * @package   	Raketwetenschap
+ * @subpackage 	Plugins/Nieuwe_Post_types
  * @copyright 	Copyright (C) 2022 - 2023, Thijs Moens.
  *
- * @thijsmoens-new-post-types
- * Plugin Name: ThijsMoens Nieuwe Post Types
- * Version:     6.0
- * Plugin URI:  https://thijs.website
- * Description: Een simpele plugin voor het maken van nieuwe post types op de website van Thijs Moens.
+ * @raketwetenschap-nieuwe-post-types
+ * Plugin Name: Raketwetenschap Nieuwe Post Types
+ * Version:     7.0.0
+ * Plugin URI:  https://raketwetenschap.com
+ * Description: Een simpele plugin voor het maken van nieuwe post types op de website van Raketwetenschap.
  * Author:      Thijs Moens
- * Author URI:  https://thijs.website
- * Text Domain: thijsmoens-new-post-types
+ * Author URI:  https://thijsmoens.nl
+ * Text Domain: raketwetenschap-nieuwe-post-types
  */
 
 if ( ! function_exists( 'add_filter' ) ) {
@@ -22,9 +22,9 @@ if ( ! function_exists( 'add_filter' ) ) {
 	exit();
 }
 
-if ( ! defined( 'TM__NEW_POST_TYPES_FILE' ) ) {
-	define( 'TM__NEW_POST_TYPES_FILE', __FILE__ );
+if ( ! defined( 'RW_NIEUWE_POST_TYPES_FILE' ) ) {
+	define( 'RW_NIEUWE_POST_TYPES_FILE', __FILE__ );
 }
 
 // Laad de plugin.
-require_once dirname( TM__NEW_POST_TYPES_FILE ) . '/thijsmoens-new-post-types-hoofd.php';
+require_once dirname( RW_NIEUWE_POST_TYPES_FILE ) . '/raketwetenschap-nieuwe-post-types-hoofd.php';
