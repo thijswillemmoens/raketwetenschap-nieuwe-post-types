@@ -5,9 +5,9 @@
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
- * @since 7.0.0
- * @author Thijs Moens <post@thijsmoens.nl
- * @link https://thijsmoens.nl
+ * @since 8.0.0
+ * @author Thijs Moens <thijs@raketwetenschap.com>
+ * @link https://raketwetenschap.com
  */
 if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_series' ) ) :
 
@@ -31,7 +31,7 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_series' ) )
      
      
         $parameters = array(
-            'label'               => __( 'serie', 'raketwetenschap-nieuwe-post-types' ),
+            'label'               => __( 'series', 'raketwetenschap-nieuwe-post-types' ),
             'description'         => __( 'De serie met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
@@ -53,7 +53,7 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_series' ) )
         );
      
         // Registreer deze serie
-        register_post_type( 'serie', $parameters );
+        register_post_type( 'series', $parameters );
  
     }
  
@@ -68,8 +68,8 @@ endif;
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
  * @since 7.0.0
- * @author Thijs Moens <post@thijsmoens.nl
- * @link https://thijsmoens.nl
+ * @author Thijs Moens <thijs@raketwetenschap.com>
+ * @link https://raketwetenschap.com
  */
 if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_projecten' ) ) :
 

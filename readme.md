@@ -3,6 +3,7 @@
 Een simpele plugin voor het maken van nieuwe custom post types voor op de websites van Raketwetenschap.
 
 ### Changelog
+- 8.0: Vertaling naar het Engels.
 - 7.0: Terug naar de basis
 - 6.0: Changed to new branding name and translate to English.
 - 5.0: Thema's is series geworden
