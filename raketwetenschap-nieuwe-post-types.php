@@ -4,14 +4,14 @@
  *
  * @package   	Raketwetenschap
  * @subpackage 	Plugins/Nieuwe_Post_types
- * @copyright 	Copyright (C) 2022 - 2023, Thijs Moens.
+ * @copyright 	Copyright (C) 2022 - 2023, WM.
  *
  * @raketwetenschap-nieuwe-post-types
  * Plugin Name: Raketwetenschap Nieuwe Post Types
  * Version:     8.0
  * Plugin URI:  https://raketwetenschap.com
  * Description: Een simpele plugin voor het maken van nieuwe post types op de website van Raketwetenschap.
- * Author:      Thijs Moens
+ * Author:      WM
  * Author URI:  https://raketwetenschap.com
  * Text Domain: raketwetenschap-nieuwe-post-types
  */
