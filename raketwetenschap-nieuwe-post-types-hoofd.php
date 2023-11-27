@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Maak een post type voor alle series.
+ * Maak een post type voor alle collecties.
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
@@ -9,30 +9,30 @@
  * @author Waldemar <hallo@raketwetenschap.com>
  * @link https://raketwetenschap.com
  */
-if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_series' ) ) :
+if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_collecties' ) ) :
 
-    function raketwetenschap__nieuwe_post_type_voor_alle_series() {
+    function raketwetenschap__nieuwe_post_type_voor_alle_collecties() {
  
         $labels = array(
-            'name'                => _x( 'Series', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
-            'singular_name'       => _x( 'Serie', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
-            'menu_name'           => __( 'Series', 'raketwetenschap-nieuwe-post-types' ),
-            'parent_item_colon'   => __( 'Parent Serie', 'raketwetenschap-nieuwe-post-types' ),
-            'all_items'           => __( 'Alle series', 'raketwetenschap-nieuwe-post-types' ),
-            'view_item'           => __( 'Bekijk de serie', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new_item'        => __( 'Voeg nieuwe serie toe', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new'             => __( 'Nieuwe serie', 'raketwetenschap-nieuwe-post-types' ),
-            'edit_item'           => __( 'Wijzig serie', 'raketwetenschap-nieuwe-post-types' ),
-            'update_item'         => __( 'Update serie', 'raketwetenschap-nieuwe-post-types' ),
-            'search_items'        => __( 'Doorzoek serie', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found'           => __( 'Geen serie gevonden', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found_in_trash'  => __( 'Geen serie gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
+            'name'                => _x( 'Collecties', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
+            'singular_name'       => _x( 'Collectie', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
+            'menu_name'           => __( 'Collecties', 'raketwetenschap-nieuwe-post-types' ),
+            'parent_item_colon'   => __( 'Parent Collectie', 'raketwetenschap-nieuwe-post-types' ),
+            'all_items'           => __( 'Alle collecties', 'raketwetenschap-nieuwe-post-types' ),
+            'view_item'           => __( 'Bekijk de collectie', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new_item'        => __( 'Voeg nieuwe collectie toe', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new'             => __( 'Nieuwe collectie', 'raketwetenschap-nieuwe-post-types' ),
+            'edit_item'           => __( 'Wijzig collectie', 'raketwetenschap-nieuwe-post-types' ),
+            'update_item'         => __( 'Update collectie', 'raketwetenschap-nieuwe-post-types' ),
+            'search_items'        => __( 'Doorzoek collectie', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found'           => __( 'Geen collectie gevonden', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found_in_trash'  => __( 'Geen collectie gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
         );
      
      
         $parameters = array(
-            'label'               => __( 'series', 'raketwetenschap-nieuwe-post-types' ),
-            'description'         => __( 'De serie met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
+            'label'               => __( 'collecties', 'raketwetenschap-nieuwe-post-types' ),
+            'description'         => __( 'De collectie met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             'hierarchical'        => false,
@@ -52,12 +52,12 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_series' ) )
     
         );
      
-        // Registreer deze serie
-        register_post_type( 'series', $parameters );
+        // Registreer deze collectie
+        register_post_type( 'collectie', $parameters );
  
     }
  
-    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_series', 0 );
+    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_collecties', 0 );
 
 endif; 
 
