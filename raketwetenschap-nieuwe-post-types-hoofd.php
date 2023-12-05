@@ -304,7 +304,7 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_puzzels' ) 
         );
      
         // Registreer deze puzzel
-        register_post_type( 'puzzel', $parameters );
+        register_post_type( 'puzzle', $parameters );
  
     }
  
