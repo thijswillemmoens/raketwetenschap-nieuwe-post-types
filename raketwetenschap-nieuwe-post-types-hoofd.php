@@ -5,8 +5,8 @@
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
- * @since 8.0.0
- * @author Thijs Moens <hallo@raketwetenschap.com>
+ * @since 9.1
+ * @author Thijs Moens <hello@raketwetenschap.com>
  * @link https://raketwetenschap.com
  */
 if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_videos' ) ) :
@@ -42,7 +42,7 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_videos' ) )
             'show_in_nav_menus'   => true,
             'show_in_admin_bar'   => true,
             'menu_position'       => 5,
-            'menu_icon'           => 'dashicons-open-folder',
+            'menu_icon'           => 'dashicons-video-alt3',
             'can_export'          => true,
             'has_archive'         => true,
             'exclude_from_search' => false,
