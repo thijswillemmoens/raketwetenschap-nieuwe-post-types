@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Maak een post type voor alle gidsen.
+ * Maak een post type voor alle videos.
  * 
  * @package Raketwetenschap
  * @subpackage Plugins/Nieuwe_Post_Types
@@ -9,30 +9,30 @@
  * @author Thijs Moens <hallo@raketwetenschap.com>
  * @link https://raketwetenschap.com
  */
-if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_gidsen' ) ) :
+if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_videos' ) ) :
 
-    function raketwetenschap__nieuwe_post_type_voor_alle_gidsen() {
+    function raketwetenschap__nieuwe_post_type_voor_alle_videos() {
  
         $labels = array(
-            'name'                => _x( 'Gidsen', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
-            'singular_name'       => _x( 'Gids', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
-            'menu_name'           => __( 'Gidsen', 'raketwetenschap-nieuwe-post-types' ),
-            'parent_item_colon'   => __( 'Parent Gids', 'raketwetenschap-nieuwe-post-types' ),
-            'all_items'           => __( 'Alle gidsen', 'raketwetenschap-nieuwe-post-types' ),
-            'view_item'           => __( 'Bekijk de gids', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new_item'        => __( 'Voeg nieuwe gids toe', 'raketwetenschap-nieuwe-post-types' ),
-            'add_new'             => __( 'Nieuwe gids', 'raketwetenschap-nieuwe-post-types' ),
-            'edit_item'           => __( 'Wijzig gids', 'raketwetenschap-nieuwe-post-types' ),
-            'update_item'         => __( 'Update gids', 'raketwetenschap-nieuwe-post-types' ),
-            'search_items'        => __( 'Doorzoek gids', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found'           => __( 'Geen gids gevonden', 'raketwetenschap-nieuwe-post-types' ),
-            'not_found_in_trash'  => __( 'Geen gids gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
+            'name'                => _x( 'Video\'s', 'Post Type General Name', 'raketwetenschap-nieuwe-post-types' ),
+            'singular_name'       => _x( 'Video', 'Post Type Singular Name', 'raketwetenschap-nieuwe-post-types' ),
+            'menu_name'           => __( 'Video\'s', 'raketwetenschap-nieuwe-post-types' ),
+            'parent_item_colon'   => __( 'Parent Video', 'raketwetenschap-nieuwe-post-types' ),
+            'all_items'           => __( 'Alle videos', 'raketwetenschap-nieuwe-post-types' ),
+            'view_item'           => __( 'Bekijk de video', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new_item'        => __( 'Voeg nieuwe video toe', 'raketwetenschap-nieuwe-post-types' ),
+            'add_new'             => __( 'Nieuwe video', 'raketwetenschap-nieuwe-post-types' ),
+            'edit_item'           => __( 'Wijzig video', 'raketwetenschap-nieuwe-post-types' ),
+            'update_item'         => __( 'Update video', 'raketwetenschap-nieuwe-post-types' ),
+            'search_items'        => __( 'Doorzoek video', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found'           => __( 'Geen video gevonden', 'raketwetenschap-nieuwe-post-types' ),
+            'not_found_in_trash'  => __( 'Geen video gevonden in de prullenbak', 'raketwetenschap-nieuwe-post-types' ),
         );
      
      
         $parameters = array(
-            'label'               => __( 'gidsen', 'raketwetenschap-nieuwe-post-types' ),
-            'description'         => __( 'Het gids met alle info en artikelen', 'raketwetenschap-nieuwe-post-types' ),
+            'label'               => __( 'Video\'s', 'raketwetenschap-nieuwe-post-types' ),
+            'description'         => __( 'Een story met alle info en video.', 'raketwetenschap-nieuwe-post-types' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             'hierarchical'        => false,
@@ -52,12 +52,12 @@ if ( ! function_exists( 'raketwetenschap__nieuwe_post_type_voor_alle_gidsen' ) )
     
         );
      
-        // Registreer deze gids
-        register_post_type( 'guide', $parameters );
+        // Registreer deze video
+        register_post_type( 'story', $parameters );
  
     }
  
-    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_gidsen', 0 );
+    add_action( 'init', 'raketwetenschap__nieuwe_post_type_voor_alle_videos', 0 );
 
 endif; 
 
